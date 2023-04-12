@@ -1,3 +1,15 @@
 export default defineNuxtConfig({
-  modules: ["@nuxtjs/tailwindcss"],
+  modules: [
+    "@nuxtjs/tailwindcss",
+    "@pinia/nuxt",
+    "@nuxtjs/strapi",
+    "@formkit/nuxt",
+    "@nuxt/devtools",
+  ],
+  strapi: {
+    auth: {
+      // fields: {}
+      populate: "*",
+    },
+  },
 });

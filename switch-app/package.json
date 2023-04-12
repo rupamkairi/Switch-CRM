@@ -9,10 +9,22 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
+    "@nuxt/devtools": "^0.4.0",
     "@nuxtjs/tailwindcss": "^6.6.5",
+    "@tailwindcss/typography": "^0.5.9",
+    "flowbite-typography": "^1.0.3",
     "nuxt": "^3.3.3"
   },
   "dependencies": {
-    "flowbite": "^1.6.5"
+    "@formkit/auto-animate": "^1.0.0-beta.6",
+    "@formkit/nuxt": "^0.16.4",
+    "@formkit/themes": "^0.16.4",
+    "@formkit/vue": "^0.16.4",
+    "@headlessui/vue": "^1.7.12",
+    "@nuxtjs/strapi": "^1.9.0",
+    "@pinia/nuxt": "^0.4.8",
+    "axios": "^1.3.5",
+    "flowbite": "^1.6.5",
+    "pinia": "^2.0.34"
   }
 }

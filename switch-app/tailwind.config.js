@@ -7,9 +7,16 @@ module.exports = {
     "./plugins/**/*.{js,ts}",
     "./nuxt.config.{js,ts}",
     "./node_modules/flowbite.{js,ts}",
+    "./node_modules/@formkit/themes/dist/tailwindcss/genesis/index.cjs",
   ],
+  darkMode: "class",
   theme: {
     extend: {},
   },
-  plugins: [require("flowbite")],
+  plugins: [
+    require("flowbite"),
+    require("flowbite-typography"),
+    // require("@tailwindcss/typography"),
+    require("@formkit/themes/tailwindcss"),
+  ],
 };
