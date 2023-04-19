@@ -1,34 +1,26 @@
 import { initFlowbite } from "flowbite";
 import { defineStore } from "pinia";
+// import { useRouter } from "nuxt/app";
+// import { usePageNames } from "~/composables/page-names";
 
 const initialState = {
   pageLayout: "default",
 };
-
-// Options Store
-// export const useAppStates = defineStore("appStates", {
-//   state: () => initialState,
-//   getters: {
-//     pageLayout: (state) => state.pageLayout,
-//   },
-//   actions: {
-//     setPageLayout(layout: string) {
-//       this.pageLayout = layout;
-//     },
-//   },
-// });
 
 // Composition Store
 export const useAppStates = defineStore("appStates", () => {
   const _pageLayout = ref(initialState.pageLayout);
 
   const pageLayout = computed(() => _pageLayout);
+
   function setPageLayout(layout: string) {
     _pageLayout.value = layout;
   }
 
   function initLayout() {
     const { fetchUser, setToken } = useStrapiAuth();
+    const router = useRouter();
+    const pages = usePageNames();
     const layouts = useLayoutNames();
 
     onMounted(async () => {
@@ -40,7 +32,9 @@ export const useAppStates = defineStore("appStates", () => {
       const user = await fetchUser();
       // console.log(!!user.value);
 
+      console.log(user.value);
       if (user.value) {
+        router.replace(pages.dashboard);
         setPageLayout(layouts.dashboard);
       }
     });

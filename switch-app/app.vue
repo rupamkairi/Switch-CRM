@@ -1,13 +1,6 @@
-<template>
-  <title>Switch CRM | Nuxt</title>
-  <nuxt-layout :name="pageLayout">
-    <!-- <nuxt-layout name="default"> -->
-    <nuxt-page />
-  </nuxt-layout>
-</template>
-
 <script lang="ts">
 import { useAppStates } from "./stores/appStates";
+import "flowbite";
 
 export default {
   setup() {
@@ -21,3 +14,11 @@ export default {
   },
 };
 </script>
+
+<template>
+  <title>Switch CRM | Nuxt</title>
+  <nuxt-layout :name="pageLayout">
+    <!-- <nuxt-layout name="default"> -->
+    <nuxt-page />
+  </nuxt-layout>
+</template>
