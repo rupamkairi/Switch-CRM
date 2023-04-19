@@ -1,20 +1,24 @@
 <template>
-  <div class="mx-auto container">
-    <h2 class="text-2xl mb-4 font-extrabold">Login</h2>
-    <div>
-      <FormKit
-        label="Email"
-        type="email"
-        id="email"
-        v-model="credentials.identifier"
-      />
-      <FormKit
-        label="Password"
-        type="password"
-        id="password"
-        v-model="credentials.password"
-      />
-      <FormKit type="button" @click="submitLogin" label="Login to Switch" />
+  <div class="mx-auto max-w-screen-xl p-4">
+    <div class="flex justify-center">
+      <div>
+        <h2 class="text-2xl mb-4 font-extrabold">Login</h2>
+        <div>
+          <FormKit
+            label="Email"
+            type="email"
+            id="email"
+            v-model="credentials.identifier"
+          />
+          <FormKit
+            label="Password"
+            type="password"
+            id="password"
+            v-model="credentials.password"
+          />
+          <FormKit type="button" @click="submitLogin" label="Login to Switch" />
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -29,6 +33,10 @@ const router = useRouter();
 const pages = usePageNames();
 const layouts = useLayoutNames();
 const { setPageLayout } = useAppStates();
+
+onMounted(() => {
+  setPageLayout(layouts.single);
+});
 
 const credentials = reactive({
   identifier: "user.1@public.io",

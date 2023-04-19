@@ -1,4 +1,5 @@
 <template>
-  <DashboardNavigation />
-  <slot />
+  <DashboardNavigation>
+    <slot />
+  </DashboardNavigation>
 </template>

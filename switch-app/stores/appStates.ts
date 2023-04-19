@@ -1,3 +1,4 @@
+import { initFlowbite } from "flowbite";
 import { defineStore } from "pinia";
 
 const initialState = {
@@ -31,6 +32,8 @@ export const useAppStates = defineStore("appStates", () => {
     const layouts = useLayoutNames();
 
     onMounted(async () => {
+      initFlowbite();
+
       const strapi_jwt = sessionStorage.getItem("strapi_jwt");
       setToken(strapi_jwt);
 
