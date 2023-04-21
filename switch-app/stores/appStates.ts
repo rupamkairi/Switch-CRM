@@ -30,9 +30,7 @@ export const useAppStates = defineStore("appStates", () => {
       setToken(strapi_jwt);
 
       const user = await fetchUser();
-      // console.log(!!user.value);
 
-      console.log(user.value);
       if (user.value) {
         router.replace(pages.dashboard);
         setPageLayout(layouts.dashboard);
