@@ -8,6 +8,7 @@ export const usePageNames = () => {
     chooseAccount: "/onboarding/choose-account",
 
     dashboard: "/dashboard",
+    activity: "/dashboard/activity",
     jobs: "/dashboard/jobs",
     applications: "/dashboard/applications",
   };

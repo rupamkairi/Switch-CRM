@@ -1,7 +1,7 @@
 <template>
   <div>Dashboard</div>
   <pre>{{ JSON.stringify(user, null, 2) }}</pre>
-  <ActionsLogoutButton />
+  <!-- <ActionsLogoutButton /> -->
 </template>
 
 <script setup lang="ts">

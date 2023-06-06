@@ -1,3 +1,8 @@
+<script></script>
+
 <template>
-  <div>Jobs</div>
+  <div>
+    <h3 class="text-xl font-bold">Jobs</h3>
+  </div>
+  <JobList />
 </template>

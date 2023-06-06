@@ -1,4 +1,4 @@
 <template>
   <default-navigation />
-  <slot />
+  <slot></slot>
 </template>

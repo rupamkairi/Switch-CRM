@@ -51,6 +51,8 @@ async function submitLogin() {
       // password: "@Pass1234",
       // identifier: "applicant.1@public.io",
       // password: "@Pass1234",
+      // identifier: "recruiter.1@public.io",
+      // password: "@Pass1234",
     });
 
     console.log({ token: _login.jwt, user: { ..._login.user.value } });

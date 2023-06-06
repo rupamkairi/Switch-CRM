@@ -1,5 +1,5 @@
 <template>
   <DashboardNavigation>
-    <slot />
+    <slot></slot>
   </DashboardNavigation>
 </template>
